@@ -1,4 +1,4 @@
-package com.example.movieapp.screens.home
+package com.example.movieapp.screens.details
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -11,11 +11,11 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -63,7 +63,7 @@ fun DetailsScreen(navController: NavController, movieId: String?) {
                     IconButton(onClick = {
                         navController.popBackStack()
                     }) {
-                        Icon(imageVector = Icons.Default.ArrowBack, contentDescription = "Arrow Back",
+                        Icon(imageVector = Icons.AutoMirrored.Default.ArrowBack, contentDescription = "Arrow Back",
                             tint = Color(0xFF000000))
                     }
                 }
@@ -79,7 +79,7 @@ fun DetailsScreen(navController: NavController, movieId: String?) {
             Spacer(modifier = Modifier.height(4.dp))
             MovieRow(newMovieList.first(), titleColor = Color.Cyan)
             Spacer(modifier = Modifier.height(8.dp))
-            Divider()
+            HorizontalDivider()
             Spacer(modifier = Modifier.height(2.dp))
             Text("Movie Images",
                 style = MaterialTheme.typography.titleMedium,

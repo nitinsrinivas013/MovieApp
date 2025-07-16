@@ -1,7 +1,5 @@
 package com.example.movieapp.screens.home
 
-import android.graphics.Color
-import android.util.Log
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -45,7 +43,7 @@ fun MainContent(navController: NavController , movieList : List<Movie> = getMovi
                 }
             )
         }
-    ) { paddingValues -> // Added paddingValues parameter
+    ) { paddingValues ->
         Column(modifier = Modifier.padding(paddingValues).padding(12.dp)) {
             LazyColumn {
                 items(movieList){
